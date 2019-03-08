@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row m-5">
+      <div class="col">
+        <h1>Calcular IMC</h1>
+
+        <p></p>
+        <p></p>
+        <form>
+          <label class="p-2" for="">Nome:</label>
+          <input type="text" name="nome" [(ngModel)]="nome"><br/>
+
+          <label class="p-2" for="">Peso:</label>
+          <input type="text" name="valor1" [(ngModel)]="valor1"><br/>
+          <label class="p-1" for="">Altura: </label>
+          <input type="text" name="valor2" [(ngModel)]="valor2"><br/>
+
+          <button type="button" name="button" (click)="clique()">Somar</button>
+          <br/>
+
+
+
+          <table>
+            <tr>
+              <td><b>Nome</b></td>
+              <td><b>Peso</b></td>
+              <td><b>Altura</b></td>
+              <td><b>IMC</b></td>
+            </tr>
+            <tr>
+              <td *ngFor="let nome of listaNomes">{{nome}}</td>
+              <td *ngFor="let peso of listaPeso">{{peso}}</td>
+              <td *ngFor="let altura of listaAltura">{{altura}}</td>
+              <td *ngFor="let imc of listaResult">{{imc}}</td>
+            </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+        </form>
+      </div>
+    </div>
+</div>
