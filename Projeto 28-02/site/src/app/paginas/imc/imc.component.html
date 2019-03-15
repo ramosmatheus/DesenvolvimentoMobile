@@ -17,9 +17,12 @@
           <button type="button" name="button" (click)="clique()">Somar</button>
           <br/>
 
+          <ul *ngFor="let nome of listaNomes">
+            <li>{{ nome }}</li>
+          </ul>
 
 
-          <table>
+          <!--<table>
             <tr>
               <td><b>Nome</b></td>
               <td><b>Peso</b></td>
@@ -27,12 +30,12 @@
               <td><b>IMC</b></td>
             </tr>
             <tr>
-              <td *ngFor="let nome of listaNomes">{{nome}}</td>
+              <td </td>
               <td *ngFor="let peso of listaPeso">{{peso}}</td>
               <td *ngFor="let altura of listaAltura">{{altura}}</td>
               <td *ngFor="let imc of listaResult">{{imc}}</td>
             </tr>
-          </table>
+          </table>-->
 
 
 

@@ -18,6 +18,21 @@ export class ImcComponent{
   total: number;
   totalFinal: string;
 
+  constructor(){//CRUD
+    //this.listaNomes.push('Matheus');//inserir
+    //this.listaNomes.push('Joao');
+    //this.listaNomes.push('Pietra');
+    //this.listaNomes.splice(0,1);
+    //let indice = this.listaNomes.indexOf('Joao');
+
+    //console.log(indice);
+
+    //for(let nome of this.listaNomes){//listar
+    //  console.log(nome);
+    //}
+
+  }
+
   clique(): void {
     this.listaNomes.push(this.nome);
     this.listaPeso.push(this.valor1);
@@ -36,7 +51,7 @@ export class ImcComponent{
     }
 
     this.listaResult.push(this.totalFinal);
-    
+
     this.nome = "";
     this.valor1 = 0;
     this.valor2 = 0;

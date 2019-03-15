@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row m-5">
+      <div class="col">
+        <h1>Cadastrar Produto</h1>
+
+        <p></p>
+        <p></p>
+        <form>
+          <label class="p-2" for="">Nome:</label>
+          <input type="text" name="produto.descricao" [(ngModel)]="produto.nome"><br/>
+
+
+          <label class="p-2" for="">Descricao:</label>
+          <input type="text" name="produto.descricao" [(ngModel)]="produto.descricao"><br/>
+
+          <label class="p-2">Preço: </label>
+          <input type="text" name="produto.preco" [(ngModel)]="produto.preco"><br/>
+
+          <button type="button" name="button" (click)="cadastrar()">Cadastrar</button>
+          <br/>
+
+
+
+          <table>
+            <tr>
+              <td><b>Nome</b>
+              <td><b>Descricao</b>
+              <td><b>Preço</b></td>
+            </tr>
+            <tr *ngFor = "let prod of listaProduto; let i = index">
+
+                <td>{{prod.nome}}</td>
+                <td>{{prod.descricao}}</td>
+                <td>{{prod.preco}}</td>
+                <td>
+                  <button name="button" (click)="excluir(i)">Excluir</button>
+                </td>
+                <td>
+                  <button name="button" (click)="alterar(i)">alterar</button>
+                </td>
+
+            </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+      </div>
+    </div>
+</div>

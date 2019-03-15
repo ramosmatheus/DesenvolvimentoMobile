@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row m-5">
+      <div class="col">
+        <h1>Cadastrar Pessoa</h1>
+
+        <p></p>
+        <p></p>
+        <form>
+          <label class="p-2" for="">Nome:</label>
+          <input type="text" name="estado.nome" [(ngModel)]="estado.nome"><br/>
+
+
+          <label class="p-2" for="">Sigla:</label>
+          <input type="text" name="estado.sigla" [(ngModel)]="estado.sigla"><br/>
+
+          <button type="button" name="button" (click)="cadastrar()">Cadastrar</button>
+          <br/>
+
+
+
+          <table>
+            <tr>
+              <td><b>Nome</b>
+              <td><b>Sigla</b>
+
+            </tr>
+            <tr *ngFor = "let est of listaEstado; let i = index">
+
+                <td>{{est.nome}}</td>
+                <td>{{est.sigla}}</td>
+                <td>
+                  <button name="button" (click)="excluir(i)">Excluir</button>
+                </td>
+                <td>
+                  <button name="button" (click)="alterar(i)">alterar</button>
+                </td>
+
+            </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+      </div>
+    </div>
+</div>
